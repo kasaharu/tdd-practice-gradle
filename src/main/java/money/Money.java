@@ -12,7 +12,7 @@ class Money {
       this.currency = currency;
     }
 
-    Money plus(Money addend) {
+    Expression plus(Money addend) {
       return new Money(amount + addend.amount, currency);
     }
 
