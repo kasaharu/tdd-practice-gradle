@@ -3,7 +3,7 @@ package money;
 class Money implements Expression {
     protected int amount;
     protected String currency;
-    Money times(int multiplier) {
+    Expression times(int multiplier) {
       return new Money(amount * multiplier, currency);
     }
 
@@ -12,7 +12,7 @@ class Money implements Expression {
       this.currency = currency;
     }
 
-    Expression plus(Money addend) {
+    Expression plus(Expression addend) {
       return new Sum(this, addend);
     }
 
